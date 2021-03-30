@@ -3,4 +3,16 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="empty_field">empty todo</string>
+    <string name="todo">todo</string>
+    <string name="add_todo">add todo</string>
+    <string name="edit_text_hint">e.g, Complete college assignment</string>
+    <string name="todo_btn_desc">set todo priority button</string>
+    <string name="today_calendar_btn">set priority btn</string>
+    <string name="tomorrow">tomorrow</string>
+    <string name="next_week">next week</string>
+    <string name="today">today</string>
+    <string name="due_date">due date</string>
+    <string name="high">high</string>
+    <string name="medium">medium</string>
+    <string name="low">low</string>
 </resources>

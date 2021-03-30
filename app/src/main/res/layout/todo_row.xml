@@ -18,7 +18,7 @@
         android:id="@+id/todo_row_todo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="todo"
+        android:text="@string/todo"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/todo_row_chip"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
-        android:text="today"
+        android:text="@string/today"
         app:chipIcon="@drawable/ic_baseline_today_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/todo_row_radio_btn" />
