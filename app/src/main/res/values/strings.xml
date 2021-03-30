@@ -15,4 +15,6 @@
     <string name="high">high</string>
     <string name="medium">medium</string>
     <string name="low">low</string>
+    <string name="action_settings">Settings</string>
+    <string name="delete_all_todo">Delete all Todo</string>
 </resources>

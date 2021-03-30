@@ -9,13 +9,13 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/Theme.Tasks.AppBarOverlay">
+        android:theme="@style/Theme.TodoFinal.AppBarOverlay">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:popupTheme="@style/Theme.Tasks.PopupOverlay" />
+            app:popupTheme="@style/Theme.TodoFinal.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
