@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.todofinal.adapter.OnTodoClickListener;
 import com.example.todofinal.adapter.TodoAdapter;
+import com.example.todofinal.data.TodoRepository;
 import com.example.todofinal.model.SharedViewModel;
 import com.example.todofinal.model.Todo;
 import com.example.todofinal.model.TodoViewModel;
@@ -79,6 +80,11 @@ public class MainActivity extends AppCompatActivity implements OnTodoClickListen
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        }
+
+        // delete allTodo
+        if (id == R.id.action_delete_all_todo) {
+            TodoViewModel.deleteAll();
         }
 
         return super.onOptionsItemSelected(item);
