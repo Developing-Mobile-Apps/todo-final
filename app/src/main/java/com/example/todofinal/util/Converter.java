@@ -26,6 +26,4 @@ public class Converter {
     public static Priority toPriority(String priority) {
         return (priority == null) ? null : Priority.valueOf(priority);
     }
-
-
 }

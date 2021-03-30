@@ -38,4 +38,12 @@ public class Utils {
 
         return color;
     }
+
+    public static boolean areDateSame(Date date1, Date date2) {
+        SimpleDateFormat simpleDateFormat = (SimpleDateFormat) SimpleDateFormat.getDateInstance();
+        simpleDateFormat.applyPattern("EEE, MMM, d");
+
+        return simpleDateFormat.format(date1).equals(simpleDateFormat.format(date2));
+
+    }
 }
