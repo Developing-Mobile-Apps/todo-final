@@ -43,7 +43,7 @@ public class TodoRepository {
         TodoRoomDatabase.databaseWriteExecutor.execute(() -> todoDao.delete(todo));
     }
 
-    public void deleteAllTask() {
+    public void deleteAll() {
         TodoRoomDatabase.databaseWriteExecutor.execute(todoDao::deleteAll);
     }
 }
