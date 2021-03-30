@@ -1,5 +1,6 @@
 package com.example.todofinal;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements OnTodoClickListen
     private TodoAdapter todoAdapter;
     private BottomSheetFragment bottomSheetFragment;
     private SharedViewModel sharedViewModel;
+    private static final int LAUNCH_ACTIVITY_REQUEST = 1001;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,9 +83,13 @@ public class MainActivity extends AppCompatActivity implements OnTodoClickListen
         if (id == R.id.action_settings) {
             return true;
         }
-
-        // delete allTodo
-        if (id == R.id.action_delete_all_todo) {
+        else if (id == R.id.action_about) {
+            // go to about page
+            Intent intent = About.makeIntent(this);
+            startActivityForResult(intent, LAUNCH_ACTIVITY_REQUEST);
+        }
+        else if (id == R.id.action_delete_all_todo) {
+            // delete allTodo
             TodoViewModel.deleteAll();
         }
 
