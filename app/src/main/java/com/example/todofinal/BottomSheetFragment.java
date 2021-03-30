@@ -36,7 +36,7 @@ import java.util.Date;
 public class BottomSheetFragment extends BottomSheetDialogFragment implements View.OnClickListener {
     // properties
     Calendar calendar = Calendar.getInstance();
-    private EditText enterTask;
+    private EditText enterTodo;
     private ImageButton calendarButton;
     private ImageButton priorityButton;
     private RadioGroup priorityRadioGroup;
@@ -65,7 +65,7 @@ public class BottomSheetFragment extends BottomSheetDialogFragment implements Vi
         calendarGroup = view.findViewById(R.id.calendar_group);
         calendarView = view.findViewById(R.id.calendar_view);
         calendarButton = view.findViewById(R.id.today_calendar_button);
-        enterTask = view.findViewById(R.id.enter_todo_et);
+        enterTodo = view.findViewById(R.id.enter_todo_et);
         saveButton = view.findViewById(R.id.save_todo_button);
         priorityButton = view.findViewById(R.id.priority_todo_button);
         priorityRadioGroup = view.findViewById(R.id.radioGroup_priority);
@@ -127,27 +127,27 @@ public class BottomSheetFragment extends BottomSheetDialogFragment implements Vi
 
         // save todo
         saveButton.setOnClickListener(saveBtnView -> {
-            String todo = enterTask.getText().toString().trim();
+            String todo = enterTodo.getText().toString().trim();
 
             if (!TextUtils.isEmpty(todo) && dueDate != null && priority != null) {
-                Todo myTask = new Todo(todo,
+                Todo myTodo = new Todo(todo,
                         priority,
                         dueDate,
                         Calendar.getInstance().getTime(),
                         false);
 
                 if (isEdit) {
-                    Todo updateTask = sharedViewModel.getSelectedItem().getValue();
-                    updateTask.setTodo(todo);
-                    updateTask.setDateCreated(Calendar.getInstance().getTime());
-                    updateTask.setPriority(priority);
-                    updateTask.setDueDate(dueDate);
-                    TodoViewModel.update(updateTask);
+                    Todo updateTodo = sharedViewModel.getSelectedItem().getValue();
+                    updateTodo.setTodo(todo);
+                    updateTodo.setDateCreated(Calendar.getInstance().getTime());
+                    updateTodo.setPriority(priority);
+                    updateTodo.setDueDate(dueDate);
+                    TodoViewModel.update(updateTodo);
                     sharedViewModel.setIsEdit(false);
                 } else {
-                    TodoViewModel.insert(myTask);
+                    TodoViewModel.insert(myTodo);
                 }
-                enterTask.setText("");
+                enterTodo.setText("");
 
                 if (this.isVisible()) {
                     this.dismiss();
@@ -166,7 +166,7 @@ public class BottomSheetFragment extends BottomSheetDialogFragment implements Vi
         if (sharedViewModel.getSelectedItem().getValue() != null) {
             isEdit = sharedViewModel.getIsEdit();
             Todo todo = sharedViewModel.getSelectedItem().getValue();
-            enterTask.setText(todo.getTodo());
+            enterTodo.setText(todo.getTodo());
         }
     }
 
