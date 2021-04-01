@@ -82,10 +82,26 @@ public class BottomSheetFragment extends BottomSheetDialogFragment implements Vi
     }
 
     @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        // save the visibility state of calendar group
+        if (calendarGroup.getVisibility() == View.VISIBLE) {
+            outState.putBoolean("is_calendar_group_visible", true);
+        }
+    }
+
+    @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
         sharedViewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
+
+        if (savedInstanceState != null) {
+            boolean isVisible = savedInstanceState.getBoolean("is_calendar_group_visible");
+            if (isVisible) {
+                calendarGroup.setVisibility(View.VISIBLE);
+            }
+        }
 
         calendarButton.setOnClickListener(calendarBtnView -> {
             calendarGroup.setVisibility(
