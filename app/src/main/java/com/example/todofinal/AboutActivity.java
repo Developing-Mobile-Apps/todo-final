@@ -7,11 +7,11 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class About extends AppCompatActivity {
+public class AboutActivity extends AppCompatActivity {
 
     // create and return a intent that launches this activity
     public static Intent makeIntent(Context context) {
-        Intent intent = new Intent(context, About.class);
+        Intent intent = new Intent(context, AboutActivity.class);
         return intent;
     }
 

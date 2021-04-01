@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity implements OnTodoClickListen
             return true;
         } else if (id == R.id.action_about) {
             // go to about page
-            Intent intent = About.makeIntent(this);
+            Intent intent = AboutActivity.makeIntent(this);
             startActivityForResult(intent, LAUNCH_ACTIVITY_REQUEST);
         } else if (id == R.id.action_delete_all_todo) {
             // delete allTodo
