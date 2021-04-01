@@ -35,10 +35,10 @@
         android:layout_height="74dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_add_task_24"
-        android:contentDescription="@string/todo" />
+        app:srcCompat="@drawable/ic_baseline_add_task_24" />
 
     <TextView
         android:id="@+id/app_about_title"
@@ -70,10 +70,23 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:onClick="addRemoveFragment"
         android:text="@string/rate_this_app_in_play_store"
-        android:onClick="goBack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/app_about" />
+
+    <FrameLayout
+        android:id="@+id/app_rating_fragment"
+        android:name="AppRatingFragmentContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_rating_btn"
+        app:layout_constraintVertical_bias="0.106"
+        tools:layout="@layout/fragment_rate_app" />
 </androidx.constraintlayout.widget.ConstraintLayout>
