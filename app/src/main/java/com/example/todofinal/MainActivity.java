@@ -130,9 +130,7 @@ public class MainActivity extends AppCompatActivity implements OnTodoClickListen
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        } else if (id == R.id.action_about) {
+       if (id == R.id.action_about) {
             // go to about page
             Intent intent = AboutActivity.makeIntent(this);
             startActivityForResult(intent, LAUNCH_ACTIVITY_REQUEST);
