@@ -1,3 +1,29 @@
 <resources>
-    <string name="app_name">Todo Final</string>
+    <string name="app_name">Todo</string>
+    <string name="app_about">About Todo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="empty_field">empty todo</string>
+    <string name="todo">todo</string>
+    <string name="add_todo">add todo</string>
+    <string name="edit_text_hint">e.g, Complete college assignment</string>
+    <string name="todo_btn_desc">set todo priority button</string>
+    <string name="today_calendar_btn">set priority btn</string>
+    <string name="tomorrow">tomorrow</string>
+    <string name="next_week">next week</string>
+    <string name="today">today</string>
+    <string name="due_date">Due Date</string>
+    <string name="high">high</string>
+    <string name="medium">medium</string>
+    <string name="low">low</string>
+    <string name="action_settings">Settings</string>
+    <string name="delete_all_todo">Delete all Todo</string>
+    <string name="action_about">About App</string>
+    <string name="channel_name">todo_notifications</string>
+    <string name="channel_description">notifies the user about the todo whose due date is near</string>
+    <string name="rate_this_app_in_play_store">rate this app in play store</string>
+    <string name="app_version">Version 1.0</string>
+    <string name="app_author">Todo by Dipesh BC</string>
+    <string name="app_desc">Flexibly create and track your dailay todo tasks, so you stay in control and achieve your goals.</string>
+    <string name="app_short_desc">All of your Todo in One Place.</string>
 </resources>
