@@ -13,6 +13,12 @@ The following diagram shows all the pieces of the app. Each of the enclosing box
 ## <img src="./after_add_todo.png" width=300 />
 ## <img src="./upcoming_todo_notification.png" width=300 />
 ## <img src="./about_app.png" width=300 />
+## <img src="./app_rating.png" width=300 />
+
+## <img src="./add_todo_land.png" width=300 />
+## <img src="./after_add_todo_land.png" width=300 />
+## <img src="./about_app_land.png" width=300 />
+## <img src="./app_rating_land.png" width=300 />
 
 ## App running GIF
 ## <img src="./todo.gif" width=600 />
