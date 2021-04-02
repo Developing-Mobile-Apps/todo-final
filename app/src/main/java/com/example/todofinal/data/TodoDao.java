@@ -26,7 +26,7 @@ public interface TodoDao {
     @Query("SELECT * FROM todo_table WHERE todo_id == :id")
     LiveData<Todo> get(long id);
 
-    @Query("SELECT * FROM todo_table")
+    @Query("SELECT * FROM todo_table ORDER BY due_date")
     LiveData<List<Todo>> getAll();
 
     @Query("DELETE FROM todo_table")
